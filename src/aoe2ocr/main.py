@@ -1,4 +1,5 @@
 import pytesseract
+
 # import pyautogui
 from PIL import Image, ImageOps
 
@@ -57,10 +58,10 @@ def main():
     screenshot = load_image("screenshot.jpg")
 
     # Take a screenshot if no image found
-    
-    #if screenshot is None:
-        # print("Screenshot not found")
-        # screenshot = take_screenshot()
+
+    # if screenshot is None:
+    # print("Screenshot not found")
+    # screenshot = take_screenshot()
 
     # Process the image
     final_image = image_processing(screenshot)
