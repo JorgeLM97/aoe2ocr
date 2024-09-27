@@ -1,23 +1,39 @@
-# OCR RTS Helper
+# AOE2 OCR - Roadmap
 
-# Roadmap
+## Stage 1 - Ver. 0.1
 
 - Image Parsing Module
-    - *Take a screenshot of the game and parse the relevant info (1080p)
+    - Take a screenshot of the game and parse the relevant info periodically (1080p)
+
+- Build Order Module
+    - Hardcode a scouts BO
+
+- In-Game Overlay
+    - Make a simple, non intrusive pannel that shows the suggested BO step
+
+- Game Logic Module
+    - Evaluate current state from parsed info and provide suggestions on where to send vils
+
+## TBD
+
+- Image Parsing Module
     - Gather info from different resolutions and apply it to the filter
     - HUD Scaling configuration
 
+- Notification Parsing Module
+    - Gather from the notifications such as "Castle Built" shown on the screen, to improve the BO suggestions
+
 - Build Order Module
-    - *Hardcode a scouts BO
     - Plan a config format for build orders
     - Make a parser to get build orders from a text file
-    - Make a GUI to easily add BOs
 
 - Info Panel GUI
-    - *Make a simple, non intrusive pannel that shows the suggested BO step
+    - Make a GUI to easily add BOs
     - Make it customizable
 
-- Live suggestions
-    - *Write the logic for live suggestions in game, i.e. get the current state and show the next step on the panel
-
-* Are for an MVP
+- Other
+    - Localization
+    - Civilization Based BO Suggestions
+    - Idle Warning
+    - Resource Tracking
+    - Build Order sharing platform? Integration with existing platform?
