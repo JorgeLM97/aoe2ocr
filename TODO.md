@@ -12,7 +12,6 @@
     - Plan a config format for build orders
     - Make a parser to get build orders from a text file
     - Make a GUI to easily add BOs
-    - (Hera Build order parser from PDF)
 
 - Info Panel GUI
     - *Make a simple, non intrusive pannel that shows the suggested BO step
@@ -20,3 +19,5 @@
 
 - Live suggestions
     - *Write the logic for live suggestions in game, i.e. get the current state and show the next step on the panel
+
+* Are for an MVP

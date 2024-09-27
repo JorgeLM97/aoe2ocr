@@ -16,3 +16,6 @@ build/
 
 # Virtual Environment
 .venv/**
+
+# Visual Studio Code
+.vscode/

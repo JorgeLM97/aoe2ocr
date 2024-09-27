@@ -1,8 +1,9 @@
 import pytesseract
-import pyautogui
+# import pyautogui
 from PIL import Image, ImageOps
 
 cfg_file = "tesseract_config"
+
 
 def load_image(file_path):
     try:
@@ -11,8 +12,8 @@ def load_image(file_path):
         return None
 
 
-def take_screenshot():
-    return pyautogui.screenshot()
+# def take_screenshot():
+#    return pyautogui.screenshot()
 
 
 def apply_mask(image, mask_path):
@@ -23,6 +24,7 @@ def apply_mask(image, mask_path):
         print("Mask not found")
         return image
 
+
 def image_processing(image):
     # Crop the image to the desired region
     image = image.crop((0, 0, 575, 50))
@@ -30,7 +32,7 @@ def image_processing(image):
     # debug
     image.save("step1.jpg")
 
-    #Invert the image colors
+    # Invert the image colors
     image = ImageOps.invert(image)
     image.save("step2.jpg")
 
@@ -40,9 +42,10 @@ def image_processing(image):
 
     return image
 
+
 def perform_ocr(image):
     try:
-        return pytesseract.image_to_string(image, lang='eng', config='--psm 6')
+        return pytesseract.image_to_string(image, lang="eng", config="--psm 6")
     except pytesseract.TesseractError as e:
         print(f"Error during OCR: {e}")
         return ""
@@ -52,10 +55,12 @@ def main():
 
     # Get a saved screenshot from the disk if available
     screenshot = load_image("screenshot.jpg")
-    
+
     # Take a screenshot if no image found
-    if screenshot == None:
-        screenshot = take_screenshot()
+    
+    #if screenshot is None:
+        # print("Screenshot not found")
+        # screenshot = take_screenshot()
 
     # Process the image
     final_image = image_processing(screenshot)
@@ -71,7 +76,7 @@ def main():
 
     snip4 = final_image.crop((308, 32, 348, 48))
     snip4.save("snip4.jpg")
-    
+
     snip5 = final_image.crop((408, 32, 448, 48))
     snip5.save("snip5.jpg")
 
@@ -81,7 +86,6 @@ def main():
     text3 = perform_ocr(snip3)
     text4 = perform_ocr(snip4)
     text5 = perform_ocr(snip5)
-
 
     # Print the detected text
     print("Wood ", text1)

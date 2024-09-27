@@ -1,0 +1,2 @@
+tessedit_write_images true
+tessedit_char_whitelist 0123456789
