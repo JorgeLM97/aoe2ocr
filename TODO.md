@@ -31,6 +31,8 @@
     - Make a GUI to easily add BOs
     - Make it customizable
 
+- CUDA Based OCR
+
 - Other
     - Localization
     - Civilization Based BO Suggestions
